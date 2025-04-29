@@ -55,16 +55,30 @@ _Note that `admitted_by` is a foreign key to the employee table._
 Create the following routes as efficiently as possible, using validation where appropriate:
 
 1. **Add new patient**: Create a route to add a new patient.
+![img.png](img.png)
 2. **Add new doctor**: Create a route to add a new doctor.
+![img_1.png](img_1.png)
 3. **Change doctor status**: Create a route to change a doctor's status.
+
 4. **Update doctor's department**: Create a route to update a doctor's department.
+![img_2.png](img_2.png)
 5. **Update patient information**: Create a route to update patient information (the user should be able to update any patient information through this route).
+![img_3.png](img_3.png)
 6. **Write a short answer in README.md**. In your `README.md`, write a short answer to the following questions:
 
-   - Did you use the same type of route to update patient information as to update an employee's department?
-   - Why did you choose the selected strategy?
-   - What are the advantages and disadvantages of the strategies you chose for creating these routes?
-   - What is the cost-benefit between using `PUT` and `PATCH`?
+   ### ¿Usaste el mismo tipo de ruta para actualizar la información del paciente que para actualizar el departamento del doctor?
+No. Usé `PUT` para el paciente y `PATCH` para el doctor.
+
+### ¿Por qué elegiste esa estrategia?
+Porque `PUT` es más apropiado para actualizaciones completas de recursos, mientras que `PATCH` permite modificar sólo un campo específico sin alterar los demás.
+
+### ¿Ventajas y desventajas?
+- `PUT`: garantiza reemplazo completo; útil para mantener consistencia total.
+- `PATCH`: evita sobrescritura accidental; más eficiente para cambios parciales.
+
+### ¿Coste-beneficio entre PUT y PATCH?
+- `PUT` implica enviar todos los campos del objeto, lo que puede ser innecesario si sólo uno cambia.
+- `PATCH` es más eficiente y seguro en cambios pequeños, pero puede requerir lógica adicional si hay validaciones más complejas.
 
 <br>  
 
